@@ -11,8 +11,8 @@ const fetchData = () => {
 };
 
 export const Component = () => {
-  const [data, setData] = useState();
-
+  // const [data, setData] = useState<Awaited<undefined | Promise<Data>>>();
+  const [data, setData] = useState<Data | undefined>(undefined);
   useEffect(() => {
     fetchData().then((val) => {
       setData(val);
